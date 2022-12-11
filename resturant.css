@@ -1,0 +1,19 @@
+nav{
+    padding: 20px;
+    justify-content: space-between;
+    height: 100px;
+    
+}
+.header{
+    background-image: url('SAWYAR.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+ul li{
+    color: blanchedalmond;
+}
+h1{margin-left: 20px;}
+a{
+    color: blanchedalmond;
+}

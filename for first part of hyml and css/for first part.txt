@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>Kumudini Higher secondary school</title>
+    <link rel="stylesheet" href="kumudini css.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+  <section class="header">
+    <nav>
+      <a href="my first project.html"><img src="images/sijanlogo.png"></a>
+      <div class="nav-links" id="navlinks">
+        <i class="fa fa-times"  aria-hidden="true" onclick="hidemenu()"></i>
+    <ul>
+      <li><a href="">HOME</a></li>
+      <li><a href="">ABOUT</a></li>
+      <li><a href="">CONTACT</a></li>
+      <li><a href="">COURSE</a></li>
+      <li><a href="">BLOG</a></li>
+    </ul>
+</div>
+<i class="fa fa-bars" onclick="showmenu()"></i>
+    </nav>
+    <!--after the home button haru haslesi description ko lagi-->
+    <div class="textbox">
+    <h1>Best school of the district</h1>
+    <p>we offer the courses from class nursery to +2 in science and management</p>
+<a href="" class="hero-btn">visit us to know more</a>
+</div>
+  </section>
+  <script>
+    var navlinks = document.getElementById("navlinks");
+  function showmenu(){
+    navlinks.style.right = "0";
+  }
+    function hidemenu(){
+    navlinks.style.right = "-200px";
+    
+
+  }
+  </script>
+
+
+</body>
+</html>
+
+
+
+for css
+*{
+    margin: 0;
+    padding: 0; 
+    font-family: 'Cabin', sans-serif;
+    
+}
+ .header{
+     min-height: 100vh;
+     width: 100%;
+     background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/IMG_20211231_175135.jpg);
+     background-position: center;
+     background-size: cover;
+     position: relative;
+
+ }
+ nav{
+     display: flex;
+     padding: 2% 6%;
+     justify-content: space-between;
+     align-items: center;
+      
+ }
+ nav img{
+     width: 150px;
+ }
+ .nav-links{
+     flex:1;
+     text-align: right;
+}
+ .nav-links ul li{
+     list-style: none;
+     display: inline-block;
+     padding: 8px 12px;
+     position: relative;
+ } /* home haru ko colour white garauna ko lagi*/
+ .nav-links ul li a{
+     color: white;
+     text-decoration: none;
+     font-size: 20px ;
+
+ }
+ /* tyo home haru ko tala line launa ko lagi*/
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: orangered;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+
+     }
+     /* cursor lagda matra tala colour dekhaune havard use garne*/
+     .nav-links ul li:hover:after{
+         width: 100%;
+}
+.textbox{
+    width: 90%;
+    text-align: center;
+    color: white;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+     
+}
+ .textbox h1{
+     font-size: 60px;
+     font-family: Georgia, 'Times New Roman', Times, serif;
+      ;}
+
+    .textbox p{
+        font-size: 20px;
+        margin-top: 10px;
+        margin-bottom: 30px;
+        
+    }
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;/*yesle underline hatauxa*/
+    color: white;
+    border: 1px solid white;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+/* to display yellow colour when a cursor is taken near*/
+.hero-btn:hover{
+    border: 1px solid white;
+    background: orangered;
+    transition: 2s;
+}/* thulo screen display na garauna ko lagi*/
+nav .fa{
+    display: none;
+}
+@media (max-width:700px){
+    .textbox h1{
+        font-size: 20px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: absolute;
+        background: orangered;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+    }
+    nav .fa{
+        display: block;
+        color:aliceblue;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links ul{
+        padding: 30 px;
+    }
+}
